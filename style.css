@@ -17,6 +17,8 @@ p{
 }
 h1{
     font-family: 'Technology', sans-serif;
+    text-shadow: 4px 2px 4px blue;
+    text-decoration: underline;
 }
 h2{
     font-family: 'Technology', sans-serif;
