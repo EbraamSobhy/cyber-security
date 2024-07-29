@@ -114,7 +114,10 @@ span{
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media  (max-width: 768px) {
+    body {
+        display: block;
+    }
     header {
         font-size: 10px;
         text-align: center;
@@ -132,9 +135,19 @@ span{
     }
 
     .command {
-        font-size: 10px;
+        font-size: 35px;
+        text-align: center;
     }
 
+    .card {
+        width: 50px;
+        height: 40px;
+    }
+
+    .hacker {
+        font-size: 24px;
+        text-align: center;
+    }
     img {
         width: 30px;
         height: 100%;
