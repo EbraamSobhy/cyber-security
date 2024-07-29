@@ -33,7 +33,6 @@ table,th,td{
     border-style: double;
     border-color:whitesmoke;
     font-family: 'Technology', sans-serif;
-    
 }
 ul{
     list-style-type: square;
@@ -98,22 +97,6 @@ span{
     background-color: aliceblue;
 }
 
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
-    header {
-        font-size: 25px;
-    }
-
-    .card-img-top {
-        height: 300px;
-    }
-
-    .video {
-        width: 100%;
-        float: none;
-    }
-}
-
 .button-link {
     background-color: rgb(47, 255, 57);
     border: none;
@@ -128,4 +111,53 @@ span{
     cursor: pointer;
     border-radius: 12px;
     font-family: 'Technology', sans-serif;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+    .card-img-top {
+        height: 300px;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    .command {
+        font-size: 10px;
+    }
+
+    img {
+        width: 30px;
+        height: 100%;
+        grid-row: auto;
+        text-align: center;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+
+    .iframe {
+        padding: 1px;
+        margin: 12px;
+        height: 20px;
+        width: 80px;
+        border-style: solid;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 50px;
+        border-color: red;
+    }
+    p {
+        text-align: center;
+        font-size: 20px;
+    }
 }

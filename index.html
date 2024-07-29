@@ -213,8 +213,8 @@
                 <b style="color: white; margin: 20px;"><li>Cybersecurity Specialist/Technician</li></b>
             </ul>
             <br>
-        <h1 style="color:greenyellow; margin: 20px; font-size: 60px;"><b><ins>Are you want to be like Hackers ?</ins></b></h1> 
-        <p style="color:rgb(47, 255, 57); margin: 20px; font-size: 60px; text-shadow: 4px 2px 4px blue;"><b><ins>Command Prompt (Steps) :</ins></b></p> 
+        <h1 style="color:greenyellow; margin: 20px; font-size: 60px;"><b><ins>Are you want to be like Hackers ?</ins></b></h1>
+        <p style="color:rgb(47, 255, 57); margin: 20px; font-size: 60px; text-shadow: 4px 2px 4px blue;"><b><ins  class="command" >Command Prompt (Steps) :</ins></b></p>
         <ol>
             <b style="color:rgb(47, 255, 57); margin: 20px; text-shadow: 4px 2px 4px blue;"><li>Tab on windows icon + R together</li></b>
             <b style="color:rgb(47, 255, 57); margin: 20px; text-shadow: 4px 2px 4px blue;"><li>Write cmd</li></b>
@@ -302,5 +302,48 @@
         <p><b style="color: red">DON'T KEEP CALM, IT'S TIME TO HELP PEOPLE WITH HACKING ! <br> BE AN ETHICAL HACKER !
         </p>
         </footer>
+
+        <script>
+            window.onload = function() {
+                var c = document.getElementById("c");
+                var ctx = c.getContext("2d");
+
+                function resizeCanvas() {
+                    c.height = window.innerHeight;
+                    c.width = window.innerWidth;
+                    columns = c.width / font_size;
+                    drops = [];
+                    for (var x = 0; x < columns; x++)
+                        drops[x] = 1;
+                }
+
+                var chinese = "0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101";
+                chinese = chinese.split("");
+
+                var font_size = 10;
+                var columns = c.width / font_size;
+                var drops = [];
+                for (var x = 0; x < columns; x++)
+                    drops[x] = 1;
+
+                function draw() {
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+                    ctx.fillRect(0, 0, c.width, c.height);
+
+                    ctx.fillStyle = "#0F0";
+                    ctx.font = font_size + "px arial";
+                    for (var i = 0; i < drops.length; i++) {
+                        var text = chinese[Math.floor(Math.random() * chinese.length)];
+                        ctx.fillText(text, i * font_size, drops[i] * font_size);
+                        if (drops[i] * font_size > c.height && Math.random() > 0.975)
+                            drops[i] = 0;
+                        drops[i]++;
+                    }
+                }
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+                setInterval(draw, 33);
+            };
+        </script>
 </body>
 </html>
