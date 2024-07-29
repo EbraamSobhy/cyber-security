@@ -139,23 +139,11 @@ span{
         text-align: center;
     }
 
-    .card {
-        width: 50px;
-        height: 40px;
-    }
+    
 
     .hacker {
         font-size: 24px;
         text-align: center;
-    }
-    img {
-        width: 30px;
-        height: 100%;
-        grid-row: auto;
-        text-align: center;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 50px;
     }
 
     .iframe {
