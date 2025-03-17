@@ -42,51 +42,19 @@
             </div>
         </div>
         <br><br>
-                <!-- slider for youtube videos -->
-                <div class="slider-container">
-                    <div class="video-container" id="videoSlider">
-                        <div class="video">
-                            <iframe src="https://www.youtube.com/embed/inWWhr5tnEA" allowfullscreen></iframe>
-                        </div>
-                        <div class="video">
-                            <iframe src="https://www.youtube.com/embed/Kx4y9c7w2JQ" allowfullscreen></iframe>
-                        </div>
-                        <div class="video">
-                            <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
-                        </div>
-                        <div class="video">
-                            <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
-                        </div>
-                        <div class="video">
-                            <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
-                        </div>
+               <!-- youtube videos -->
+                <div class="video-container">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/inWWhr5tnEA" allowfullscreen></iframe>
                     </div>
-                    <button id="prevBtn">&#8701;</button>
-                    <button id="nextBtn">&#8702;</button>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Kx4y9c7w2JQ" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
+                    </div>
+                    
                 </div>
-                <br>
-                <script>
-                    let currentIndex = 0;
-            
-                    document.getElementById('nextBtn').addEventListener('click', () => {
-                        const videos = document.querySelectorAll('.video');
-                        const totalVideos = videos.length;
-                        currentIndex = (currentIndex + 1) % totalVideos;
-                        updateSlider();
-                    });
-            
-                    document.getElementById('prevBtn').addEventListener('click', () => {
-                        const videos = document.querySelectorAll('.video');
-                        const totalVideos = videos.length;
-                        currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
-                        updateSlider();
-                    });
-            
-                    function updateSlider() {
-                        const videoContainer = document.getElementById('videoSlider');
-                        videoContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
-                    }
-                </script>
         <br>
         <h1 style="color: rgb(47, 255, 57); margin: 20px;"><b>Top movies and series about cyber secutity and hacking :</b></h1>
         <ul>
@@ -133,7 +101,7 @@
                 <div class="item1" style="--position: 3"><img src="mr robot.jpg" alt=""></div>
             </div>
         </div>
-        <br><br>
+        <br>
                 <!-- slider for youtube videos -->
                 <div class="slider-container">
                     <div class="video-container" id="videoSlider">
@@ -146,33 +114,10 @@
                         <div class="video">
                             <iframe src="https://www.youtube.com/embed/N6HGuJC--rk" allowfullscreen></iframe>
                         </div>
+                        
                     </div>
-                    <button id="prevBtn">&#8701;</button>
-                    <button id="nextBtn">&#8702;</button>
                 </div>
                 <br>
-                <script>
-                    let currentIndex1 = 0;
-            
-                    document.getElementById('nextBtn').addEventListener('click', () => {
-                        const videos = document.querySelectorAll('.video');
-                        const totalVideos = videos.length;
-                        currentIndex1 = (currentIndex1 + 1) % totalVideos;
-                        updateSlider();
-                    });
-            
-                    document.getElementById('prevBtn').addEventListener('click', () => {
-                        const videos = document.querySelectorAll('.video');
-                        const totalVideos = videos.length;
-                        currentIndex1 = (currentIndex1 - 1 + totalVideos) % totalVideos;
-                        updateSlider();
-                    });
-            
-                    function updateSlider() {
-                        const videoContainer = document.getElementById('videoSlider');
-                        videoContainer.style.transform = `translateX(${-currentIndex1 * 100}%)`;
-                    }
-                </script>
         <p style="color: white; margin: 20px;"><b>is an Algerian cyber-criminal and a carder who goes by the code name BX1 and has been nicknamed the "Smiling Hacker". Bendelladj is a polyglot speaking 5 languages often used in profit in view of his linguistic knowledge in order to extract money almost everywhere in the world. This led to a search for him that lasted 5 years. He was on the top 10 list of the most wanted hackers by Interpol and the FBI for allegedly embezzling tens of millions of dollars from more than two hundred American and European financial institutions, via a computer virus, the "SpyEYE Botnet" that infected more than 60 million computers worldwide (mostly from the United States), which he developed with his Russian accomplice Aleksandr Andreivich Panin, aka "Gribodemon", to steal banking information stored on infected computers so they decided to make a movie about Hamza Bendelladj life story called هرم الرابع and most successful series is MR.ROBOT.  <a href="https://en.wikipedia.org/wiki/Hamza_Bendelladj"target="_blank">more about hamza bendelladj</a></b></p>
         <h3 style="color:black; font-weight: bold;" class="threat"><ins>Cybersecurity classified into Attack and Defense <br>Defense is better than Attack in working in IT Security? because Attack is also called <b style="color: rgb(47, 255, 57);">HACKING</b></h3> 
         <h1 style="color: red; margin: 20px; text-shadow: 3px 1px 3px red;"><b><ins>15 Common Types of Cyber Attacks:</ins></b></h1>
@@ -305,32 +250,6 @@
                     <iframe src="https://www.youtube.com/embed/CdQV4Ci3v0M" allowfullscreen></iframe>
                 </div>
             </div>
-            <button id="prevBtn">&#8701;</button>
-            <button id="nextBtn">&#8702;</button>
-        </div>
-        <br>
-        <script>
-            let currentIndex2 = 0;
-    
-            document.getElementById('nextBtn').addEventListener('click', () => {
-                const videos = document.querySelectorAll('.video');
-                const totalVideos = videos.length;
-                currentIndex2 = (currentIndex2 + 1) % totalVideos;
-                updateSlider();
-            });
-    
-            document.getElementById('prevBtn').addEventListener('click', () => {
-                const videos = document.querySelectorAll('.video');
-                const totalVideos = videos.length;
-                currentIndex2 = (currentIndex2 - 1 + totalVideos) % totalVideos;
-                updateSlider();
-            });
-    
-            function updateSlider() {
-                const videoContainer = document.getElementById('videoSlider');
-                videoContainer.style.transform = `translateX(${-currentIndex2 * 100}%)`;
-            }
-        </script>
         <br>
         <footer>
         <p><b style="color: red">DON'T KEEP CALM, IT'S TIME TO HELP PEOPLE WITH HACKING ! <br> BE AN ETHICAL HACKER !
