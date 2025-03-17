@@ -7,6 +7,7 @@
     <title>Introduction To Cyber Security</title>
     <link rel="icon" type="image/x-icon" href="hacker icon.PNG">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/technology" rel="stylesheet">
@@ -22,65 +23,75 @@
         <h2 style="font-size: 90px;  text-shadow: 4px 2px 3px green"><b>Cyber Security</b></h2>
     </header>
     
-    <p style="color: white; margin: 20px;" ><b>is the protection of computer systems and networks from information disclosure, theft of, or damage to their hardware, software, or electronic data, as well as from the disruption or misdirection of the services they provide.
+    <p style="color: white; margin: 5px;" ><b>is the protection of computer systems and networks from information disclosure, theft of, or damage to their hardware, software, or electronic data, as well as from the disruption or misdirection of the services they provide.
 
         The field has become of significance due to the expanded reliance on computer systems, the Internet, and wireless network standards such as Bluetooth and Wi-Fi, and due to the growth of smart devices, including smartphones, televisions, and the various devices that constitute the Internet of things (IoT). Cybersecurity is also one of the significant challenges in the contemporary world, due to the complexity of information systems, both in terms of political usage and technology. Its primary goal is to ensure the system's dependability, integrity, and data privacy.</b></p>
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-4">
-                <!-- Card 1 -->
-                <div class="card" style="background-color: black;">
-                    <h2 class="card-title" style="text-align: center "><b>Hacker</b></h2>
-                    <a href=""><img class="card-img-top " src="cyber security.jpg"></a>
-                <div class="card-body">
-                    <!-- Card content goes here -->
-                    <p class="card-text"></p>
-                </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <!-- Card 2 -->
-                <div class="card" style="background-color: black;">
-                    <h2 class="card-title" style="text-align: center "><b>Programming</b></h2>
-                    <a href=""><img class="card-img-top"  src="hacking.jpg"></a>
-                <div class="card-body">
-                    <!-- Card content goes here -->
-                    <p class="card-text"></p>
-                </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <!-- Card 3 -->
-                <div class="card" style="background-color: black;">
-                    <h2 class="card-title" style="text-align: center "><b>Security</b></h2>
-                    <a href=""><img class="card-img-top " src="security.jpg"></a>
-                <div class="card-body">
-                    <!-- Card content goes here -->
-                    <p class="card-text"></p>
-                </div>
-                </div>
-            </div>
+        <!-- 3D Image Slider -->
+        <div class="banner">
+            <div class="slider" style="--quantity: 10">
+                <div class="item" style="--position: 1"><img src="security.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="cyber security.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="hacking.jpg" alt=""></div>
+                <div class="item" style="--position: 4"><img src="photo.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="photo2.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="photo3.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="photo4.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="photo5.jpg" alt=""></div>
+                <div class="item" style="--position: 9"><img src="photo6.PNG" alt=""></div>
+                <div class="item" style="--position: 10"><img src="photo7.jpg" alt=""></div>
             </div>
         </div>
-        <br>
-        <div class="video-container">
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/inWWhr5tnEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/Kx4y9c7w2JQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/aP8yrkkLWlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
+        <br><br>
+                <!-- slider for youtube videos -->
+                <div class="slider-container">
+                    <div class="video-container" id="videoSlider">
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/inWWhr5tnEA" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/Kx4y9c7w2JQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/aP8yrkkLWlM" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <button id="prevBtn">&#8701;</button>
+                    <button id="nextBtn">&#8702;</button>
+                </div>
+                <br>
+                <script>
+                    let currentIndex = 0;
+            
+                    document.getElementById('nextBtn').addEventListener('click', () => {
+                        const videos = document.querySelectorAll('.video');
+                        const totalVideos = videos.length;
+                        currentIndex = (currentIndex + 1) % totalVideos;
+                        updateSlider();
+                    });
+            
+                    document.getElementById('prevBtn').addEventListener('click', () => {
+                        const videos = document.querySelectorAll('.video');
+                        const totalVideos = videos.length;
+                        currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
+                        updateSlider();
+                    });
+            
+                    function updateSlider() {
+                        const videoContainer = document.getElementById('videoSlider');
+                        videoContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+                    }
+                </script>
         <br>
         <h1 style="color: rgb(47, 255, 57); margin: 20px;"><b>Top movies and series about cyber secutity and hacking :</b></h1>
         <ul>
             <b style="color: white; margin: 20px;"><li>Who am i</li></b>
-            <b style="color: white; margin: 20px;"><li>هرم الرابع</li></b> 
+            <b style="color: white; margin: 20px;"><li>هرم الرابع</li></b>
             <b style="color: white; margin: 20px;"><li>Social network</li></b>
             <b style="color: white; margin: 20px;"><li>Hacker</li></b>
             <b style="color: white; margin: 20px;"><li>Mr.Robot</li></b>
@@ -114,59 +125,54 @@
             <b style="color: white; padding: 20px;"><li>Dan Kaminsky</li></b>
         </ol>
         <br>
-        <div></div>
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-4">
-                <!-- Card 1 -->
-                <div class="card" style="background-color: black;">
-                    <h2 class="card-title" style="text-align: center "><b>Hamza Bendelladj</b></h2>
-                    <a href=""><img class="card-img-top " src="hamza bendelladj.jpg"></a>
-                <div class="card-body">
-                    <!-- Card content goes here -->
-                    <p class="card-text"></p>
-                </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <!-- Card 2 -->
-                <div class="card" style="background-color: black;">
-                    <h2 class="card-title" style="text-align: center "><b>الهرم الرابع</b></h2>
-                    <a href=""><img class="card-img-top"  src="haram rabe3.jpg"></a>
-                <div class="card-body">
-                    <!-- Card content goes here -->
-                    <p class="card-text"></p>
-                </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <!-- Card 3 -->
-                <div class="card" style="background-color: black;">
-                    <h2 class="card-title" style="text-align: center "><b>Mr. Robot</b></h2>
-                    <a href=""><img class="card-img-top " src="mr robot.jpg"></a>
-                <div class="card-body">
-                    <!-- Card content goes here -->
-                    <p class="card-text"></p>
-                </div>
-                </div>
-            </div>
+        <!-- 3D Image Slider -->
+        <div class="banner1">
+            <div class="slider1" style="--quantity: 3">
+                <div class="item1" style="--position: 1"><img src="hamza bendelladj.jpg" alt=""></div>
+                <div class="item1" style="--position: 2"><img src="haram rabe3.jpg" alt=""></div>
+                <div class="item1" style="--position: 3"><img src="mr robot.jpg" alt=""></div>
             </div>
         </div>
-        <br>
-        <div class="video-container">
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/E7ycg7uITsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube-nocookie.com/embed/uJ_J0bMeZLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/N6HGuJC--rk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <br>
+        <br><br>
+                <!-- slider for youtube videos -->
+                <div class="slider-container">
+                    <div class="video-container" id="videoSlider">
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/E7ycg7uITsc" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe src="https://www.youtube-nocookie.com/embed/uJ_J0bMeZLk" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/N6HGuJC--rk" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <button id="prevBtn">&#8701;</button>
+                    <button id="nextBtn">&#8702;</button>
+                </div>
+                <br>
+                <script>
+                    let currentIndex1 = 0;
+            
+                    document.getElementById('nextBtn').addEventListener('click', () => {
+                        const videos = document.querySelectorAll('.video');
+                        const totalVideos = videos.length;
+                        currentIndex1 = (currentIndex1 + 1) % totalVideos;
+                        updateSlider();
+                    });
+            
+                    document.getElementById('prevBtn').addEventListener('click', () => {
+                        const videos = document.querySelectorAll('.video');
+                        const totalVideos = videos.length;
+                        currentIndex1 = (currentIndex1 - 1 + totalVideos) % totalVideos;
+                        updateSlider();
+                    });
+            
+                    function updateSlider() {
+                        const videoContainer = document.getElementById('videoSlider');
+                        videoContainer.style.transform = `translateX(${-currentIndex1 * 100}%)`;
+                    }
+                </script>
         <p style="color: white; margin: 20px;"><b>is an Algerian cyber-criminal and a carder who goes by the code name BX1 and has been nicknamed the "Smiling Hacker". Bendelladj is a polyglot speaking 5 languages often used in profit in view of his linguistic knowledge in order to extract money almost everywhere in the world. This led to a search for him that lasted 5 years. He was on the top 10 list of the most wanted hackers by Interpol and the FBI for allegedly embezzling tens of millions of dollars from more than two hundred American and European financial institutions, via a computer virus, the "SpyEYE Botnet" that infected more than 60 million computers worldwide (mostly from the United States), which he developed with his Russian accomplice Aleksandr Andreivich Panin, aka "Gribodemon", to steal banking information stored on infected computers so they decided to make a movie about Hamza Bendelladj life story called هرم الرابع and most successful series is MR.ROBOT.  <a href="https://en.wikipedia.org/wiki/Hamza_Bendelladj"target="_blank">more about hamza bendelladj</a></b></p>
         <h3 style="color:black; font-weight: bold;" class="threat"><ins>Cybersecurity classified into Attack and Defense <br>Defense is better than Attack in working in IT Security? because Attack is also called <b style="color: rgb(47, 255, 57);">HACKING</b></h3> 
         <h1 style="color: red; margin: 20px; text-shadow: 3px 1px 3px red;"><b><ins>15 Common Types of Cyber Attacks:</ins></b></h1>
@@ -226,7 +232,7 @@
                     <div style="width: 1002px; height: 600px; " class="card">
                     <img class="card-img-top" src="terminal-retro-green.png" alt="Card image" style="width: 1000px; height: 500px;">
                     <div style="background-color: black;" class="card-body">
-                        <a href="#" target="_blank" class="button-link"><b>Command Prompt</b></a>
+                        <a href="https://www.cmd.to/" target="_blank" class="button-link"><b>Command Prompt</b></a>
                     </div>
                     </div>
                 </center>
@@ -286,64 +292,52 @@
         </ol>
         <br>
         <h1  style="color: rgb(47, 255, 57); margin: 20px;"><b><ins>Videos about Day in the life of Cyber Security :</ins></b></h1>
-        <div class="video-container">
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/dUjNVzzqTiA?si=xdJT_TgHRBK9O4-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- slider for youtube videos -->
+        <div class="slider-container">
+            <div class="video-container" id="videoSlider">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/dUjNVzzqTiA?si=xdJT_TgHRBK9O4-d" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/VxRX2u0Bk2g" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/CdQV4Ci3v0M" allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/VxRX2u0Bk2g" title="Day in the Life of a Cybersecurity Student" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="video">
-                <iframe width="480" height="320" src="https://www.youtube.com/embed/CdQV4Ci3v0M" title="Cyber Security Day In the Life! (18 year old Cyber Security Engineer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+            <button id="prevBtn">&#8701;</button>
+            <button id="nextBtn">&#8702;</button>
         </div>
+        <br>
+        <script>
+            let currentIndex2 = 0;
+    
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                const videos = document.querySelectorAll('.video');
+                const totalVideos = videos.length;
+                currentIndex2 = (currentIndex2 + 1) % totalVideos;
+                updateSlider();
+            });
+    
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                const videos = document.querySelectorAll('.video');
+                const totalVideos = videos.length;
+                currentIndex2 = (currentIndex2 - 1 + totalVideos) % totalVideos;
+                updateSlider();
+            });
+    
+            function updateSlider() {
+                const videoContainer = document.getElementById('videoSlider');
+                videoContainer.style.transform = `translateX(${-currentIndex2 * 100}%)`;
+            }
+        </script>
         <br>
         <footer>
         <p><b style="color: red">DON'T KEEP CALM, IT'S TIME TO HELP PEOPLE WITH HACKING ! <br> BE AN ETHICAL HACKER !
         </p>
         </footer>
 
-        <script>
-            window.onload = function() {
-                var c = document.getElementById("c");
-                var ctx = c.getContext("2d");
-
-                function resizeCanvas() {
-                    c.height = window.innerHeight;
-                    c.width = window.innerWidth;
-                    columns = c.width / font_size;
-                    drops = [];
-                    for (var x = 0; x < columns; x++)
-                        drops[x] = 1;
-                }
-
-                var chinese = "0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101";
-                chinese = chinese.split("");
-
-                var font_size = 10;
-                var columns = c.width / font_size;
-                var drops = [];
-                for (var x = 0; x < columns; x++)
-                    drops[x] = 1;
-
-                function draw() {
-                    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-                    ctx.fillRect(0, 0, c.width, c.height);
-
-                    ctx.fillStyle = "#0F0";
-                    ctx.font = font_size + "px arial";
-                    for (var i = 0; i < drops.length; i++) {
-                        var text = chinese[Math.floor(Math.random() * chinese.length)];
-                        ctx.fillText(text, i * font_size, drops[i] * font_size);
-                        if (drops[i] * font_size > c.height && Math.random() > 0.975)
-                            drops[i] = 0;
-                        drops[i]++;
-                    }
-                }
-                resizeCanvas();
-                window.addEventListener('resize', resizeCanvas);
-                setInterval(draw, 33);
-            };
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>   
 </body>
 </html>
