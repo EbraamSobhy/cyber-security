@@ -14,19 +14,27 @@ body, html {
 p{
     font-family: 'Technology', sans-serif;
     font-size: x-large;
+    margin: 0;
+    padding: 0;
 }
 h1{
     font-family: 'Technology', sans-serif;
     text-shadow: 4px 2px 4px blue;
     text-decoration: underline;
+    margin: 0;
+    padding: 0;
 }
 h2{
     font-family: 'Technology', sans-serif;
     font-size: xx-large;
+    margin: 0;
+    padding: 0;
 }
 li{
     font-family: 'Technology', sans-serif;
     font-size: xx-large;
+    margin: 0;
+    padding: 0;
 }
 table, th, td{
     border: 1px solid rgb(47, 255, 57);
@@ -95,6 +103,7 @@ footer {
     padding: 10px;
     border-style: solid;
     border-color: black;
+    margin: 0;
 }
 span{
     background-color: aliceblue;
@@ -197,7 +206,7 @@ span{
     object-fit: cover;
 }
 
-/* Media Queries for Responsive Design */
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
     p {
         font-size: large;
@@ -227,5 +236,286 @@ span{
     }
     .threat {
         font-size: medium;
+    }
+}
+
+
+/* Additional media queries for smaller devices */
+@media (max-width: 480px) {
+    p {
+        font-size: 0.875rem;
+    }
+    h1 {
+        font-size: 1.25rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    li {
+        font-size: 0.875rem;
+    }
+    .card-img-top {
+        height: 150px;
+    }
+    .button-link {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+    header {
+        font-size: 1.25rem;
+    }
+    .threat {
+        font-size: 0.875rem;
+    }
+}
+
+/* Additional media queries for larger devices */
+@media (min-width: 769px) {
+    p {
+        font-size: 1.125rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    li {
+        font-size: 1.125rem;
+    }
+    .card-img-top {
+        height: 300px;
+    }
+    .button-link {
+        font-size: 1.125rem;
+        padding: 12px 24px;
+    }
+    header {
+        font-size: 2rem;
+    }
+    .threat {
+        font-size: 1.125rem;
+    }
+}
+
+
+/* Base styles for the 3D image slider */
+.banner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Base styles for the video container */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.video {
+    flex: 1 1 30%;
+    min-width: 300px;
+}
+
+.video iframe {
+    width: 95%;
+    height: 200px;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .video iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video iframe {
+        height: 200px;
+    }
+}
+
+
+/* Base styles for the second 3D image slider */
+.banner1 {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slider1 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item1 {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .banner1 {
+        height: 300px;
+    }
+    .item1 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner1 {
+        height: 200px;
+    }
+    .item1 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    h1, p {
+        font-size: 40px;
+    }
+
+    .card {
+        width: 100px;
+    }
+
+    .card-img-top {
+        height: auto;
+        width: 50%;
+    }
+
+    .hacker {
+        font-size: 28px;
+    }
+
+    .command{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, p {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: auto;
+        display: flex;
+    }
+
+    .hacker {
+        font-size: 28px;
+    }
+
+    .command{
+        font-size: 28px;
+    }
+}
+
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        display: flex;
+    }
+
+    .card {
+        height: auto;
+        display: flex;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 30px;
     }
 }
